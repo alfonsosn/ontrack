@@ -8,9 +8,17 @@
 		<p>25 Elective Credits</p>
 	</section>
 	<div class="card">
-		<p ng-repeat="semester in semesters"><button class="btn btn-primary" ng-click="seeMap()">
-				{{semester}}
+		<button ng-repeat="year in years" class="btn btn-primary" ng-click="seeMap(year)" id="year-btn">
+			{{year}}
 		</button>
-		</p>
+		<div class="card" ng-repeat="(key, value) in fall">
+			<p>{{value}} </p>
+		</div>
+		<div class="card" ng-repeat="(key, value) in spring">
+			<p>{{value}} </p>
+		</div>
 	</div>
+	
+	
+
 </div>	

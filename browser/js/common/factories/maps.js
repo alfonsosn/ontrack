@@ -218,15 +218,17 @@ var maps = [{
 	}] 
 }];
 
-var semesters = ["freshman", "sophomore", "junior", "senior"];
+var years = ["freshman", "sophomore", "junior", "senior"];
 
 app.factory('maps', function(){
 	return {
-		getSemesters: function(){
-			return semesters;
+		getYears: function(){
+			return years;
 		},
-		getMap: function(){
-			return majors;
+		getMap: function(year){
+			return maps.filter(function(entry){
+				return entry.year == year;
+			})
 		}
 	}
 })
