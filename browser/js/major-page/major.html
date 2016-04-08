@@ -1,0 +1,16 @@
+<div class="container" id="home">
+	<section class="card">
+		<h1>Computer Science</h1>	
+		<p class="lead">The Major At Glance</p>
+		<p>30 CUNY Commmon Core</p>
+		<p>12 Hunter Focus Credits</p>
+		<p>53 Major Credits</p>
+		<p>25 Elective Credits</p>
+	</section>
+	<div class="card">
+		<p ng-repeat="semester in semesters"><button class="btn btn-primary" ng-click="seeMap()">
+				{{semester}}
+		</button>
+		</p>
+	</div>
+</div>	

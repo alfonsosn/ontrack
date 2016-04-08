@@ -1,0 +1,36 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fdfdfd;
+  height: 100vh;
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+
+#main {
+  padding-top: 60px;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.card{
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12)!important;
+  border-radius: 1px;
+  padding: 15px;
+  margin: 0 0 10px 0;
+}
+
+@import 'directives/main';
+@import 'home/main';
+@import 'about/main';
+@import 'tutorial/main';
+@import 'login/main';
+@import 'major/main';
