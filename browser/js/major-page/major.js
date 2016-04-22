@@ -1,7 +1,12 @@
 app.config(function ($stateProvider) {
-    $stateProvider.state('major', {
-        url: '/major',
+    $stateProvider.state('mapsDetail', {
+        url: '/maps/:majorId/',
         controller: 'mapsCtrl',
-        templateUrl: 'js/major-page/major.html'
-    });
+        templateUrl: 'js/major-page/major.html',
+        resolve: {
+            major: function($stateParams){
+                return $stateParams.majorId
+            }
+        }
+    })
 });

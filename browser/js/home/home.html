@@ -4,8 +4,7 @@
 		<p class="lead">Choose your major:</p>
 		<input class="form-control" type="text" ng-model="searchBox">
 	</section>
-	<div id="major-list" class="card" ng-if="searchBox" ng-repeat="major in majors | filter:searchBox" ng-click="seeMap()">
-		<p class="lead row" >{{major.major}}</p>
+	<div id="major-list" class="card" ng-if="searchBox" ng-repeat="major in majors | filter:searchBox">
+		<a  class="lead" ui-sref="mapsDetail({majorId:'{{major.title}}'})">{{major.title}}</a>
 	</div>
-
 </div>

@@ -2,7 +2,7 @@ var accounting =
 [
 	{	
 		year: "Freshman",
-		semester: "Fall	",
+		semester: "Fall",
 		classes: [
 
 			{
@@ -1036,18 +1036,18 @@ var economics =
 	}
 ]
 
-var years = ["freshman", "sophomore", "junior", "senior"];
+var years = ["Freshman", "Sophomore", "Junior", "Senior"];
 
-app.factory('maps', function(){
+app.factory('maps_factory', function(){
 	return {
 		getYears: function(){
 			return years;
 		},
 		getMap: function(major){
-			if (major == "Accounting")  	 return accounting
-			if (major == "Biology") 		 return biology
-			if (major == "Computer Science") return computer_science
-			if (major == "Economics") 		 return economics	
+			if (major === "Accounting")  	 return accounting
+			if (major === "Biology") 		 return biology
+			if (major === "Computer Science")return computer_science
+			if (major === "Economics") 		 return economics	
 		}
 	}
 })
